@@ -6,8 +6,8 @@ on:
   pull_request:
     branches: [main]
 
-jobs :
-  lint- and-test :
+jobs:
+  lint-and-test :
     runs-on: ubuntu-latest
     steps:
       -name : Checkout code
@@ -16,7 +16,7 @@ jobs :
       -name : Set up python
        uses : actions/setup-checkout@v5
 
-      with :
+       with :
         python-version: "3.11"
       
       -name: Install dependencies
