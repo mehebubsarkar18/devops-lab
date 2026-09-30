@@ -10,20 +10,20 @@ jobs:
   lint-and-test :
     runs-on: ubuntu-latest
     steps:
-      -name : Checkout code
-       uses : actions/checkout@v4
+      - name : Checkout code
+        uses : actions/checkout@v4
 
-      -name : Set up python
-       uses : actions/setup-checkout@v5
+      - name : Set up python
+        uses : actions/setup-checkout@v5
 
-       with :
-        python-version: "3.11"
+        with :
+          python-version: "3.11"
       
-      -name: Install dependencies
-       run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install -r requirements.txt
       
-      -name : Lint With flake8
-       run : flake8 . --max-line-length = 100
+      - name : Lint With flake8
+        run : flake8 . --max-line-length = 100
 
-      -name: Run tests with pytest
+      - name: Run tests with pytest
         run: pytest -v
